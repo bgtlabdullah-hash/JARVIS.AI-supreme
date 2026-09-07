@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI v9.6 Supreme</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="appLayout">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="logo-icon">⚡</span>
+                <h1>JARVIS Supreme</h1>
+            </div>
+            <button id="newChatBtn" class="primary-btn">+ New Chat</button>
+            <div class="tools-section">
+                <h3>Supreme Modules</h3>
+                <div id="toolsList"></div>
+            </div>
+            <div class="sidebar-footer">
+                <button id="settingsBtn" class="secondary-btn">⚙️ API Settings</button>
+                <button id="exportBtn" class="secondary-btn">📥 Export Chat</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="active-tool-display">
+                    <span id="activeToolIcon">🤖</span>
+                    <span id="activeToolName">JARVIS Chat Pro</span>
+                </div>
+                <div class="status-indicator"><span class="dot"></span> Online</div>
+            </header>
+
+            <div id="chat" class="chat-viewport">
+                <div id="welcome" class="welcome-screen">
+                    <div class="welcome-logo">J</div>
+                    <h2>Welcome to JARVIS AI Supreme</h2>
+                    <p>Select a module from the sidebar or type a prompt below to begin.</p>
+                </div>
+            </div>
+
+            <div class="input-dock">
+                <div class="input-wrapper">
+                    <textarea id="messageInput" rows="1" placeholder="Ask JARVIS AI Supreme anything..."></textarea>
+                    <button id="sendBtn" title="Send Message">🚀</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>API Configuration</h3>
+            <p>Enter your custom Groq API key (saved locally in your browser):</p>
+            <input type="password" id="apiKeyInput" placeholder="gsk_...">
+            <div class="modal-buttons">
+                <button id="saveKeyBtn" class="primary-btn">Save Key</button>
+                <button id="closeModalBtn" class="secondary-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+</body>
+</html>
